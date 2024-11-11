@@ -413,6 +413,8 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath={.data.pass
 ### To delete the cluster
 ```
 kops delete cluster --name <clustername> --state s3://<clustername> --yes
+if any errors , then execute below command.
+export KOPS_STATE_STORE=s3://<cluster-name>
 ```
 
 
